@@ -23,7 +23,7 @@ jobs:
           command: 'sudo npm install -g npm@latest'
       - run:
           name: ember-cli
-          command: 'sudo npm install -g ember-cli'
+          command: 'npm install -g ember-cli'
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
