@@ -23,7 +23,7 @@ jobs:
           command: 'sudo npm install -g npm@latest'
       - run:
           name: ember-cli
-          command: 'npm install -g ember-cli'
+          command: 'sudo npm install -g ember-cli@latest'
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
@@ -35,6 +35,6 @@ jobs:
             - ./node_modules
       - run:
           name: build
-          command: ember build`
+          command: ember build
 
 #bm8gBtdmRKTV
